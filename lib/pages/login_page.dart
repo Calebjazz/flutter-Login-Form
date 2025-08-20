@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  // sign user in method
+  // sign user in method & validation
   void signUserIn() {
     if (formKey.currentState != null && formKey.currentState!.validate()) {
       ScaffoldMessenger.of(
@@ -103,6 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: Text(
                           'Or continue with',
                           style: TextStyle(color: Colors.grey[700]),
+                          
                         ),
                       ),
                       Expanded(
